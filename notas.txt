@@ -1,0 +1,7 @@
+Para hacer que la aplicación se despliegue en producción con Vite:
+    - npm run build
+    Crea un directorio build (el curso dice que debería ser /dist)
+    Copiar esta carpeta a la raiz del proyecto backend:
+        copy-item ".\build\*" "..\curi-fullstack-backend\build" -Recurse -force
+    Scripts para automatizar:
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend"
